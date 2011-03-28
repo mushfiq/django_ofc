@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+	{% block header %}
+	<h3>{{ a }}</h3>
+	{% endblock %}
+	<script type="text/javascript">
+		function open_flash_chart_data()
+		{
+		    return JSON.stringify(data_1);
+		}
+
+		function load_1()
+		{
+		  tmp = findSWF("chart_demo");
+		  x = tmp.load( JSON.stringify(data_1) );
+		}
+
+
+		function findSWF(movieName) {
+		  if (navigator.appName.indexOf("Microsoft")!= -1) {
+		    return window[movieName];
+		  } else {
+		    return document[movieName];
+		  }
+		}
+	
+	var data_1 = {{ data|safe }}
+
+		</script>
+
+  <div class="chart" id="chart_demo"></div>
+<br>
+
+{% endblock %}
