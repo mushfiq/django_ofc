@@ -1,5 +1,7 @@
 to start the project,using commandline go to the project directory and run this command:
 						python manage.py runserver 
-And browse the demo app using your browser(http://localhost:8000)
+>>And browse the demo app using your browser(http://localhost:8000)
+>>to view the the data created using pyofc2 go to http://localhost:8000/data/
+>>to view the bar chart formed using pyofc2 go to http://localhost:8000/bar_chart/
 
 						
