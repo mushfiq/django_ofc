@@ -3,6 +3,7 @@ from django.conf import settings
 
 # the chart data views
 urlpatterns = patterns('demoapp.views',
+	('^index/$','index'),
     ('^data/$','chart_data'),
     ('^bar_chart','bar_chart')   
 )
