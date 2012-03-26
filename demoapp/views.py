@@ -68,7 +68,10 @@ def insert(request):
 		print "Error Occured!! %s " % e
 		pass
 	return render_to_response('insert.html',
-		{	'data':p
+		{	'data':titl
 		},
 		context_instance=RequestContext(request)
 		)
+		
+def read_data(request):
+	pass
