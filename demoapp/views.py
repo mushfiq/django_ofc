@@ -6,6 +6,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from pyofc2  import * 
 import random
+from demoapp.models import Post
 import time
 def chart_data(request):
     t = title(text=time.strftime('%a %Y %b %d'))
@@ -55,3 +56,19 @@ def bar_chart(request):
     )
 
     
+def insert(request):
+	titl = "Title from django"
+	p = Post()
+	p.title = titl
+	p.text = 'TEST FROM DJANGO!!'
+	
+	try:
+		p.save()
+	except Exception,e:
+		print "Error Occured!! %s " % e
+		pass
+	return render_to_response('insert.html',
+		{	'data':p
+		},
+		context_instance=RequestContext(request)
+		)

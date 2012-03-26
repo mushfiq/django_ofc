@@ -11,12 +11,12 @@ MANAGERS = ADMINS
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-DATABASE_ENGINE = ''
-DATABASE_NAME = ''
+DATABASE_ENGINE = 'django_mongodb_engine'
+DATABASE_NAME = 'analytics'
 DATABASE_USER = ''
 DATABASE_PASSWORD = ''
-DATABASE_HOST = ''
-DATABASE_PORT = ''
+DATABASE_HOST = 'localhost'
+DATABASE_PORT = 27017
 
 TIME_ZONE = 'America/Chicago'
 LANGUAGE_CODE = 'en-us'
@@ -52,5 +52,6 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+	'djangotoolbox',
     'demoapp'
 )
