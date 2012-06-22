@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from pyofc2  import * 
 import random
-from demoapp.models import Post
+from demoapp.models import ArticlesHits
 import time
 def chart_data(request):
     t = title(text=time.strftime('%a %Y %b %d'))
@@ -35,6 +35,7 @@ def bar_chart(request):
     b.text = "visits"
     b.dot_size = 4
     b.values = range(30 ,0, -1)
+    print b
 
     x = x_axis()
     y = y_axis()
@@ -54,6 +55,13 @@ def bar_chart(request):
         },
         context_instance=RequestContext(request)
     )
+
+def analytics_insert(request):
+
+    analytics_obj = ArticlesHits()
+
+    analytics_obj.title = 'Germans are eager to get the EU championship'
+
 
     
 def insert(request):
