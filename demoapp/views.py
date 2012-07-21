@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from pyofc2  import * 
 import random
-from demoapp.models import ArticlesHits
+from demoapp.models import ArticleHits
 import time
 def chart_data(request):
     t = title(text=time.strftime('%a %Y %b %d'))

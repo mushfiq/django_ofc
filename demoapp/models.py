@@ -12,7 +12,7 @@ class UserInfo(models.Model):
 
 class Articles(models.Model):
 	"""docstring for Articles"""
-	id = models.AutoField(primary_key=True)
+	id = models.FloatField(primary_key=True)
 	title = models.CharField(max_length=255)
 	source = models.CharField(max_length=50)
 	author = models.CharField(max_length=50)
